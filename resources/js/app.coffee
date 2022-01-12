@@ -1,3 +1,4 @@
 import "@hotwired/turbo"
+import Alpine from "alpinejs"
 
-console.log "hi there"
+Alpine.start()
