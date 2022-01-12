@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use Illuminate\http\Request;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------

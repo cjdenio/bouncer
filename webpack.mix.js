@@ -11,7 +11,7 @@ const mix = require("laravel-mix");
  |
  */
 
-mix.ts("resources/js/app.ts", "public/js")
+mix.coffee("resources/js/app.coffee", "public/js")
     .postCss("resources/css/app.css", "public/css", [
         require("tailwindcss"),
         require("autoprefixer"),
