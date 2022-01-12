@@ -16,5 +16,9 @@ mix.ts("resources/js/app.ts", "public/js")
         require("tailwindcss"),
         require("autoprefixer"),
     ])
-    .version()
+    .sourceMaps(true)
     .disableNotifications();
+
+if (mix.inProduction()) {
+    mix.version();
+}

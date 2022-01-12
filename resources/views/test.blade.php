@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-
-<html>
-
-<body>
+<x-layout>
     Hi there, {{ $user }}!
-</body>
-
-</html>
+</x-layout>
