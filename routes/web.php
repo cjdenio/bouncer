@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use Illuminate\Http\Request;
 
+use App\Models\App;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,14 +17,14 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function (Request $request) {
+    $app = App::where('client_id', $request->query('client_id'))->first();
 
-Route::view('/', 'welcome');
+    if ($app == null) {
+        abort(404);
+    }
 
-Route::get('/test/{user}', function (Request $request, $user) {
     return view('test', [
-        'user' => $user
+        'app' => $app
     ]);
 });
